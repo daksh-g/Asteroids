@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leaderboard</title>
+        <link rel='stylesheet' href='../styles/style.css'>
+    </head>
+    <body>
+
+        <button onclick="window.location.href ='/';"><span>Go back and play the game</span></button>
+
+        <ul id="scores">
+            
+        </ul>
+
+        <script>
+
+            const scores = ${SCORES};
+            
+            const sortable = Object.entries(scores)
+                .sort(([,a],[,b]) => a-b)
+                .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+
+
+            const scoreDom = document.getElementById("scores");
+
+            for(i in sortable) {
+                if(i != "null") {
+                    const thing = document.createElement("li");
+                    thing.innerText = i + "'s high score: " + sortable[i];
+                    scoreDom.appendChild(thing);
+                } else {
+                    const thing = document.createElement("li");
+                    thing.innerText = i + "'s high score: " + 0;
+                    scoreDom.appendChild(thing);
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>
