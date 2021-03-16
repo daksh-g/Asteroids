@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    color: white;
+    font-family: 'Roboto';
+    text-align: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("    https://motherearthmagazine.com/wp-content/uploads/2018/07/Asteroids.jpg");
+
+    background-size: 150%;
+    animation: bgAnimation 30s ease infinite;
+
+}
+
+#p5_loading{
+    color: white;
+    text-align: center;
+	font-size: 25px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes bgAnimation{
+    0%{background-position:left center; }
+    50%{background-position:right center; }
+    100%{background-position:left center; }
+}
+
+#game {
+    border: 2px solid white;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    float: right;
+	font-family: Inconsolata, Verdana;
+    background-color: rgb(0, 0, 0);
+    border: none;
+	outline: none;
+    color: ghostwhite;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 200px;
+    transition: all 250ms;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 30px;
+}
+
+button:active {
+	outline: none;
+}
+
+button::-moz-selection {
+    color: #000000;
+}
+button::selection {
+    color: #000000;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 250ms;
+}
+
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 250ms;
+}
+
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+button span::-moz-selection {
+    background-color: #000000;
+}
+button span::selection {
+    background-color: #000000;
+}
+
+#scores {
+    list-style-type: none; 
+}
+
+.replit-auth-button {
+    float: none;
+}

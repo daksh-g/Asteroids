@@ -1,0 +1,22 @@
+body {
+    color:ghostwhite;
+    font-family: 'Roboto' ;
+    text-align: center;
+    font-size: 40px;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("    https://motherearthmagazine.com/wp-content/uploads/2018/07/Asteroids.jpg");
+
+    background-size: 150%;
+    animation: bgAnimation 30s ease infinite;
+
+}
+
+a{
+    color: ghostwhite;
+}
+
+@keyframes bgAnimation{
+    0%{background-position:left center; }
+    50%{background-position:right center; }
+    100%{background-position:left center; }
+}
