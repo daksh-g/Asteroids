@@ -1,3 +1,4 @@
+// sever-side script
 const express    = require('express'),
       app        = express();
 const http       = require('http').createServer(app);
